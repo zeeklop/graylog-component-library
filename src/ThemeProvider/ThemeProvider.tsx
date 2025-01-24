@@ -1,6 +1,8 @@
 import React from 'react';
-import { MantineProvider } from '@mantine/core';
-import { theme } from '../theme';
+import { MantineProvider, localStorageColorSchemeManager } from '@mantine/core';
+import { theme } from './theme';
+
+const colorSchemeManager = localStorageColorSchemeManager({ key: 'themeMode' });
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +10,7 @@ interface Props {
 
 export function ThemeProvider({ children }: Props) {
   return (
-    <MantineProvider theme={theme} defaultColorScheme="auto">
+    <MantineProvider theme={theme} colorSchemeManager={colorSchemeManager} defaultColorScheme="auto">
       {children}
     </MantineProvider>
   );
