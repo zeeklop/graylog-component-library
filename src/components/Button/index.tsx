@@ -2,13 +2,18 @@ import React from 'react';
 import { Button as MantineButton } from '@mantine/core';
 import type { ButtonProps as MantineButtonProps } from '@mantine/core';
 
-export interface ButtonProps extends MantineButtonProps {
-  onClick: () => void,
-  children: React.ReactNode,
+const VARIANT_MAP = {
+  default: 'filled',
+  outline: 'outline',
+  transparent: 'transparent',
 };
 
-export function Button({ children, ...props }: ButtonProps): React.ReactElement<ButtonProps> {
-  return (
-    <MantineButton {...props}>{children}</MantineButton>
-  );
+export interface ButtonProps extends MantineButtonProps {
+  variant: 'default' | 'outline' | 'transparent';
+  children: React.ReactNode;
+  onClick: () => void;
+};
+
+export function Button({ variant, onClick, children, ...props }: ButtonProps): React.ReactElement<ButtonProps> {
+  return <MantineButton onClick={onClick} variant={VARIANT_MAP[variant]} {...props}>{children}</MantineButton>;
 }

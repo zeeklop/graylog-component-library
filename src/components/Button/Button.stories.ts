@@ -4,7 +4,7 @@ import { fn } from '@storybook/test';
 import { Button } from '.';
 import type { ButtonProps } from '.';
 
-const meta = {
+const meta: Meta<ButtonProps> = {
   title: 'Button',
   component: Button,
   // parameters: { layout: 'centered' },
@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: { type: 'select' },
-      options: ['filled', 'light', 'outline', 'transparent', 'white', 'subtle', 'default', 'gradient'],
+      options: ['default', 'outline', 'transparent'],
     },
     size: {
       control: { type: 'select' },
@@ -25,14 +25,30 @@ const meta = {
     loading: false,
     fullWidth: false,
   },
-} satisfies Meta<ButtonProps>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<ButtonProps>;
 
 export const Filled: Story = {
   args: {
-    variant: 'filled',
+    variant: 'default',
+    children: 'Button',
+    onClick: fn(),
+  } satisfies ButtonProps,
+};
+
+export const Outline: Story = {
+  args: {
+    variant: 'outline',
+    children: 'Button',
+    onClick: fn(),
+  } satisfies ButtonProps,
+};
+
+export const Transparent: Story = {
+  args: {
+    variant: 'transparent',
     children: 'Button',
     onClick: fn(),
   } satisfies ButtonProps,
