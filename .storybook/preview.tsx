@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
-import '@mantine/core/styles.css';
-import { useMantineColorScheme } from '@mantine/core';
 import { addons } from '@storybook/preview-api';
 import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
+import { useMantineColorScheme } from '@mantine/core';
+import { withMantineThemes } from 'storybook-addon-mantine';
 import type { Preview } from '@storybook/react';
 
 import '../assets/fonts/Poppins/Poppins.css';
 import '../assets/fonts/Roboto_Mono/Roboto.css';
 
-import { ThemeProvider } from '../src/ThemeProvider';
+import '../lib/graylog-components-library.css';
+import { theme } from '../src/ThemeProvider';
 
 const channel = addons.getChannel();
 
@@ -32,9 +33,26 @@ function ColorSchemeWrapper({ children }: { children: React.ReactNode }) {
 }
 
 export const decorators = [
-  (renderStory: any) => <ThemeProvider><ColorSchemeWrapper>{renderStory()}</ColorSchemeWrapper></ThemeProvider>,
+  (renderStory: any) => (
+    <ColorSchemeWrapper>{renderStory()}</ColorSchemeWrapper>
+  ),
+  withMantineThemes({
+    themes: [
+      { id: 'brand-theme', name: 'Brand Theme', ...theme },
+    ],
+  }),
 ];
 
-const preview: Preview = {};
+const preview: Preview = {
+  decorators: [ ...decorators ],
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
+    },
+  },
+};
 
 export default preview;

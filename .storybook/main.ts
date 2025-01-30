@@ -7,11 +7,15 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-controls',
+    '@storybook/addon-a11y',
+    '@storybook/addon-styling',
     'storybook-dark-mode',
+    'storybook-addon-mantine',
   ],
   framework: {
     name: '@storybook/react-vite',
     options: {},
   },
 };
+
 export default config;
