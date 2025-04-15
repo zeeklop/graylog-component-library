@@ -7,6 +7,20 @@ const meta: Meta<ButtonProps> = {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      toc: {
+        contentsSelector: '.sbdocs-content',
+        headingSelector: 'h3',
+        ignoreSelector: '#primary',
+        title: 'Variants',
+        disable: false,
+        unsafeTocbotOptions: {
+          orderedList: false,
+        },
+      },
+    },
+  },
 };
 
 export default meta;
@@ -15,7 +29,6 @@ type Story = StoryObj<ButtonProps>;
 export const Primary: Story = {
   name: 'Default',
   args: {
-    variant: 'default',
     children: 'Button',
   },
 };

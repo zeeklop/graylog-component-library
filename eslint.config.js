@@ -10,14 +10,6 @@ import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
 
 export default [
-  {
-    files: ['**/*.d.ts'],
-    languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {},
-    },
-    rules: {},
-  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
