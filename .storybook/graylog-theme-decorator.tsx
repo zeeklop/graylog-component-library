@@ -1,4 +1,3 @@
-import React from 'react';
 import '@mantine/core/styles.css';
 
 import { ThemeProvider } from '../src/components';
