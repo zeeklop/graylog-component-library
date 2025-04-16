@@ -4,7 +4,7 @@ export default create({
   base: 'light',
   brandTitle: 'Graylog Design System',
   brandUrl: 'https://graylog.org/',
-  brandTarget: '_self',
+  brandTarget: '_block',
   brandImage: '../src/assets/graylog-logo.png',
 
   fontBase: 'Poppins, sans-serif',
