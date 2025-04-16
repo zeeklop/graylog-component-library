@@ -1,7 +1,6 @@
 import { create } from '@storybook/theming';
 
-export default create({
-  base: 'light',
+const baseTheme = {
   brandTitle: 'Graylog Design System',
   brandUrl: 'https://graylog.org/',
   brandTarget: '_block',
@@ -13,22 +12,51 @@ export default create({
   colorPrimary: '#03C2FF',
   colorSecondary: '#9A6BFE',
 
-  appBg: '#F6F7FC',
-  appContentBg: '#FFFFFF',
-  appPreviewBg: '#F6F7FC',
-  appBorderColor: '#E1E4ED',
   appBorderRadius: 4,
+  inputBorderRadius: 2,
+};
 
-  textColor: '#252D47',
-  textInverseColor: '#252D478A',
+// const lightTheme = {
+// ...baseTheme,
+//   appBg: '#F6F7FC',
+//   appContentBg: '#FFFFFF',
+//   appPreviewBg: '#F6F7FC',
+//   appBorderColor: '#E1E4ED',
+//
+//   textColor: '#252D47',
+//   textInverseColor: '#252D478A',
+//
+//   barTextColor: '#252D47',
+//   barSelectedColor: '#03C2FF',
+//   barHoverColor: '#03C2FF',
+//   barBg: '#F6F7FC',
+//
+//   inputBg: '#F6F7FC',
+//   inputBorder: '#12182B',
+//   inputTextColor: '#252D47',
+// };
 
-  barTextColor: '#252D47',
+const darkTheme = {
+  ...baseTheme,
+  appBg: '#12182B',
+  appContentBg: '#252D47',
+  appPreviewBg: '#12182B',
+  appBorderColor: '#1C2235',
+
+  textColor: '#E1E4ED',
+  textInverseColor: '#E1E4ED8A',
+
+  barTextColor: '#E1E4ED',
   barSelectedColor: '#03C2FF',
   barHoverColor: '#03C2FF',
-  barBg: '#F6F7FC',
+  barBg: '#12182B',
 
-  inputBg: '#F6F7FC',
-  inputBorder: '#12182B',
-  inputTextColor: '#252D47',
-  inputBorderRadius: 2,
+  inputBg: '#12182B',
+  inputBorder: '#394261',
+  inputTextColor: '#E1E4ED',
+};
+
+export default create({
+  base: 'dark',
+  ...darkTheme,
 });
