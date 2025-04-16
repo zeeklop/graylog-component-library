@@ -6,6 +6,17 @@ import dts from 'vite-plugin-dts';
 import Unfonts from 'unplugin-fonts/vite';
 import type { CustomFontFace } from 'unplugin-fonts/types';
 
+const POPPINS = {
+  regular: ['Poppins-Regular', 'Poppins-Italic'],
+  medium: ['Poppins-Medium', 'Poppins-MediumItalic'],
+  bold: ['Poppins-Bold', 'Poppins-BoldItalic'],
+};
+
+const ROBOTO_MONO = {
+  regular: ['RobotoMono-Regular', 'RobotoMono-Italic'],
+  bold: ['RobotoMono-Bold', 'RobotoMono-BoldItalic'],
+};
+
 // https://vite.dev/config/
 export default defineConfig({
   build: {
@@ -35,8 +46,12 @@ export default defineConfig({
             local: 'RobotoMono',
             src: './src/assets/fonts/Roboto_Mono/static/*.ttf',
             transform(font: CustomFontFace) {
-              if (font.basename === 'RobotoMono-Bold') {
+              if (ROBOTO_MONO.bold.includes(font.basename)) {
                 font.weight = 700;
+              }
+
+              if (ROBOTO_MONO.regular.includes(font.basename)) {
+                font.weight = 400;
               }
 
               return font;
@@ -47,8 +62,16 @@ export default defineConfig({
             local: 'Poppins',
             src: './src/assets/fonts/Poppins/*.ttf',
             transform(font: CustomFontFace) {
-              if (font.basename === 'Poppins-Bold') {
+              if (POPPINS.bold.includes(font.basename)) {
                 font.weight = 700;
+              }
+
+              if (POPPINS.medium.includes(font.basename)) {
+                font.weight = 500;
+              }
+
+              if (POPPINS.regular.includes(font.basename)) {
+                font.weight = 400;
               }
 
               return font;

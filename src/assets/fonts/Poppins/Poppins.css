@@ -1,41 +1,41 @@
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-Regular.ttf) format("truetype");
+  src: local('./Poppins-Regular.ttf') format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-Italic.ttf) format("truetype");
+  src: local('./Poppins-Italic.ttf') format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-Medium.ttf) format("truetype");
+  src: local('./Poppins-Medium.ttf') format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-MediumItalic.ttf) format("truetype");
+  src: local('./Poppins-MediumItalic.ttf') format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-Bold.ttf) format("truetype");
+  src: local('./Poppins-Bold.ttf') format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Poppins", serif;
-  src: url(./Poppins-BoldItalic.ttf) format("truetype");
+  src: local('./Poppins-BoldItalic.ttf') format("truetype");
   font-weight: 700;
   font-style: italic;
 }

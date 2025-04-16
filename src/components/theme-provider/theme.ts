@@ -109,4 +109,7 @@ export const theme: MantineThemeOverride = createTheme({
   fontFamily: '"Poppins", Consolas, Arial, sans-serif',
   fontFamilyMonospace: '"Roboto Mono", Consolas, monospace',
   cursorType: 'pointer',
+  headings: {
+    fontFamily: '"Poppins", Consolas, Arial, sans-serif',
+  },
 });

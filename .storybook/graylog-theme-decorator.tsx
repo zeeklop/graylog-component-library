@@ -1,4 +1,4 @@
-import '@mantine/core/styles.css';
+import '../dist/graylog-design-system.css';
 
 import { ThemeProvider } from '../src/components';
 import { Decorator } from '@storybook/react';
