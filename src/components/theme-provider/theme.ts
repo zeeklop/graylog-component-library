@@ -1,7 +1,7 @@
 import { createTheme } from '@mantine/core';
 import type { MantineThemeOverride } from '@mantine/core';
 
-export const theme: MantineThemeOverride = createTheme({
+export const THEME_OBJECT: MantineThemeOverride = {
   focusRing: 'auto',
   colors: {
     gray: [
@@ -112,4 +112,6 @@ export const theme: MantineThemeOverride = createTheme({
   headings: {
     fontFamily: '"Poppins", Consolas, Arial, sans-serif',
   },
-});
+};
+
+export const theme: MantineThemeOverride = createTheme(THEME_OBJECT);
