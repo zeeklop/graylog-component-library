@@ -26,15 +26,13 @@ const meta: Meta<ButtonProps> = {
 export default meta;
 type Story = StoryObj<ButtonProps>;
 
-export const Primary: Story = {
-  name: 'Default',
+export const Default: Story = {
   args: {
     children: 'Button',
   },
 };
 
 export const Outline: Story = {
-  name: 'Outline',
   args: {
     variant: 'outline',
     children: 'Button',
@@ -42,7 +40,6 @@ export const Outline: Story = {
 };
 
 export const Transparent: Story = {
-  name: 'Transparent',
   args: {
     variant: 'transparent',
     children: 'Button',
