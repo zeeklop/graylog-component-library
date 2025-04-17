@@ -13,6 +13,7 @@ export default [
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
+  ...storybook.configs['flat/recommended'],
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
@@ -54,17 +55,9 @@ export default [
   prettier,
   {
     files: ['.storybook/**/*', '**/*.stories.*'],
-    languageOptions: {
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: process.cwd(),
-      },
-    },
-    plugins: {
-      storybook,
-    },
+    plugins: { storybook },
     rules: {
-      ...storybook.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'off',
     },
   },
 ];

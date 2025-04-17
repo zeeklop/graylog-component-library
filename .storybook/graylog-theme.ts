@@ -16,27 +16,29 @@ const baseTheme = {
   inputBorderRadius: 2,
 };
 
-// const lightTheme = {
-// ...baseTheme,
-//   appBg: '#F6F7FC',
-//   appContentBg: '#FFFFFF',
-//   appPreviewBg: '#F6F7FC',
-//   appBorderColor: '#E1E4ED',
-//
-//   textColor: '#252D47',
-//   textInverseColor: '#252D478A',
-//
-//   barTextColor: '#252D47',
-//   barSelectedColor: '#03C2FF',
-//   barHoverColor: '#03C2FF',
-//   barBg: '#F6F7FC',
-//
-//   inputBg: '#F6F7FC',
-//   inputBorder: '#12182B',
-//   inputTextColor: '#252D47',
-// };
+export const lightTheme = create({
+  base: 'light',
+  ...baseTheme,
+  appBg: '#F6F7FC',
+  appContentBg: '#FFFFFF',
+  appPreviewBg: '#F6F7FC',
+  appBorderColor: '#E1E4ED',
 
-const darkTheme = {
+  textColor: '#252D47',
+  textInverseColor: '#252D478A',
+
+  barTextColor: '#252D47',
+  barSelectedColor: '#03C2FF',
+  barHoverColor: '#03C2FF',
+  barBg: '#F6F7FC',
+
+  inputBg: '#F6F7FC',
+  inputBorder: '#12182B',
+  inputTextColor: '#252D47',
+});
+
+export const darkTheme = create({
+  base: 'dark',
   ...baseTheme,
   appBg: '#12182B',
   appContentBg: '#252D47',
@@ -54,9 +56,4 @@ const darkTheme = {
   inputBg: '#12182B',
   inputBorder: '#394261',
   inputTextColor: '#E1E4ED',
-};
-
-export default create({
-  base: 'dark',
-  ...darkTheme,
 });

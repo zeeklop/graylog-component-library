@@ -14,7 +14,8 @@ const ColorSchemeSetter = ({ colorScheme }: { colorScheme: string }) => {
 
   React.useEffect(
     () => setColorScheme(colorScheme as MantineColorScheme),
-    [colorScheme, setColorScheme],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [colorScheme],
   );
 
   return null;
