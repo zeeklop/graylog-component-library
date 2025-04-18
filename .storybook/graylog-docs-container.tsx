@@ -3,7 +3,7 @@ import React from 'react';
 import { addons } from '@storybook/preview-api';
 import { DocsContainer } from '@storybook/addon-docs';
 import type { DocsContainerProps } from '@storybook/addon-docs';
-import { DARK_MODE_EVENT_NAME, UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
+import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { lightTheme, darkTheme } from './graylog-theme';
 import { ThemeProvider } from '../src/components';

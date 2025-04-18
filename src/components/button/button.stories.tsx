@@ -32,16 +32,39 @@ export const Default: Story = {
   },
 };
 
-export const Outline: Story = {
+export const DefaultPrimary: Story = {
   args: {
-    variant: 'outline',
+    primary: true,
     children: 'Button',
   },
 };
 
-export const Transparent: Story = {
+export const Light: Story = {
   args: {
-    variant: 'transparent',
+    variant: 'light',
+    children: 'Button',
+  },
+};
+
+export const LightPrimary: Story = {
+  args: {
+    primary: true,
+    variant: 'light',
+    children: 'Button',
+  },
+};
+
+export const Subtle: Story = {
+  args: {
+    variant: 'subtle',
+    children: 'Button',
+  },
+};
+
+export const SubtlePrimary: Story = {
+  args: {
+    primary: true,
+    variant: 'subtle',
     children: 'Button',
   },
 };
