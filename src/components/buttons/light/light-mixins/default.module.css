@@ -19,7 +19,7 @@
     color: var(--text-dark);
 
     @mixin hover {
-      background-color: alpha(var(--background-dark), 0.9);
+      background-color: alpha(var(--background-dark), 0.8);
       color: alpha(var(--text-dark), 0.8);
     }
   }
