@@ -1,0 +1,11 @@
+@import '../buttons.module.css';
+@import './filled-mixins/index.module.css';
+
+.root {
+  @mixin button-base;
+  &[data-action="default"] { @mixin button-default; }
+  &[data-action="primary"] { @mixin button-primary; }
+  &[data-action="secondary"] { @mixin button-secondary; }
+  &[data-action="danger"] { @mixin button-danger; }
+  &[data-disabled] { @mixin button-disabled; }
+}

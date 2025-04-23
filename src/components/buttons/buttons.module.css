@@ -1,0 +1,6 @@
+:root {
+  @define-mixin button-base {
+    color: var(--mantine-primary-color-contrast);
+    font-weight: 500;
+  }
+}

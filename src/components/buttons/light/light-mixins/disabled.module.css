@@ -1,0 +1,26 @@
+@define-mixin button-disabled {
+  --background-light: alpha(var(--mantine-color-gray-2), 0.3);
+  --background-dark: alpha(var(--mantine-color-gray-4), 0.5);
+  --text-light: alpha(var(--mantine-color-gray-8), 0.5);
+  --text-dark: alpha(var(--mantine-color-gray-8), 0.8);
+
+  @mixin light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+
+    @mixin hover {
+      background-color: var(--background-light);
+      color: var(--text-light);
+    }
+  }
+
+  @mixin dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+
+    @mixin hover {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+    }
+  }
+}

@@ -1,2 +1,2 @@
 export * from './theme-provider';
-export * from './button';
+export * from './buttons';
