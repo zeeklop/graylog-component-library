@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas, Markdown, Title } from '@storybook/blocks';
+
+import * as ButtonStories from './buttons.stories';
+import { Primary, Secondary, Danger, Default, Disabled } from './filled/filled.stories';
+import { Button } from '.';
+
+<Meta of={ButtonStories} />
+
+# Buttons
+
+We currently have 2 button variants
+
+#### Filled `variant="filled"` _(default)_
+
+<Story of={ButtonStories.FilledButtons} />
+
+#### Light `variant="light"`
+
+<Story of={ButtonStories.LightButtons} />
+
+#### Sizes
+
+There are 3 different sizes for buttons `xs | sm | md`
+
+<Story of={ButtonStories.ButtonSizes} />

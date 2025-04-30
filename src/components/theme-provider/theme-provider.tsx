@@ -34,6 +34,8 @@ export function ThemeProvider({ children, colorScheme = 'light' }: ThemeProvider
       theme={theme}
       colorSchemeManager={colorSchemeManager}
       defaultColorScheme="light"
+      withCssVariables
+      withGlobalClasses
     >
       <ColorSchemeSetter colorScheme={colorScheme} />
       {children}

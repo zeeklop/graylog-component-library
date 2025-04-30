@@ -31,7 +31,7 @@ type Story = StoryObj<ButtonBase>;
 
 export const Default: Story = {};
 
-export const Disable: Story = {
+export const Disabled: Story = {
   args: {
     disabled: true,
   },

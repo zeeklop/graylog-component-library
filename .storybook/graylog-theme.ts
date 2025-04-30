@@ -6,7 +6,7 @@ const baseTheme = {
   brandTarget: '_block',
   brandImage: '../src/assets/graylog-logo.png',
 
-  fontBase: 'Poppins, sans-serif',
+  fontBase: '"Poppins", sans-serif',
   fontCode: '"Roboto Mono", monospace',
 
   colorPrimary: '#03C2FF',
