@@ -6,7 +6,7 @@ import type { ButtonProps } from './types';
 import { Primary, Secondary, Danger, Default, Disabled } from './filled/filled.stories';
 
 const meta: Meta<ButtonProps> = {
-  title: 'Components/Buttons/FilledButtons',
+  title: 'Components/Buttons/Display',
   component: Button,
 };
 

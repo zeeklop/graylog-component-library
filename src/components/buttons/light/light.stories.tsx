@@ -6,7 +6,7 @@ import type { ButtonBase } from '../types.d';
 const meta: Meta<ButtonBase> = {
   title: 'Components/Buttons/Light',
   component: ButtonLight,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   args: {
     action: 'default',
     size: 'sm',

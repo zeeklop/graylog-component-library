@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-import prettier from 'eslint-config-prettier';
+import prettier from 'eslint-config-prettier/flat';
 import prettierPlugin from 'eslint-plugin-prettier';
 import storybook from 'eslint-plugin-storybook';
 import globals from 'globals';
@@ -15,6 +15,7 @@ export default [
   ...tseslint.configs.recommendedTypeChecked,
   ...storybook.configs['flat/recommended'],
   {
+    ignores: ['node_modules/*', 'dist/*', '!.storybook'],
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parserOptions: {

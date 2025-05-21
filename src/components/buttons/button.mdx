@@ -1,0 +1,27 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs';
+import * as ButtonsStories from './buttons.stories';
+import { Primary } from './filled/filled.stories';
+
+<Meta of={ButtonsStories} name="Button Docs" />
+
+# Button
+
+**Button** is a clickable interactive element that triggers a response.
+You can place text and icons inside of a button.
+Buttons are often used for form submission and to toggle elements into view.
+
+## Usage
+<Canvas of={Primary} />
+<Controls of={Primary} />
+
+## Variants
+
+#### `filled`:
+<Canvas of={ButtonsStories.FilledButtons} />
+
+#### `light`:
+<Canvas of={ButtonsStories.LightButtons} />
+
+## Sizeses
+
+<Canvas of={ButtonsStories.ButtonSizes} />

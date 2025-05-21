@@ -4,9 +4,10 @@ import { ButtonFilled } from '.';
 import type { ButtonBase } from '../types.d';
 
 const meta: Meta<ButtonBase> = {
+  id: 'docs-buttons-primary',
   title: 'Components/Buttons/Filled',
   component: ButtonFilled,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   args: {
     action: 'default',
     size: 'sm',
